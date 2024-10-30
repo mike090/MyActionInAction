@@ -5,11 +5,11 @@ inputs:
     description: 'Who I should to greet'
     required: true
     default: 'World'
-  outputs:
-    answer: # id of output
-      description: 'The answer to everything (always 42)'
-  runs:
-    using: 'docker'
-    image: 'Dockerfile'
-    args:
-      - ${{ inputs.who-to-greet }}
+outputs:
+  answer: # id of output
+    description: 'The answer to everything (always 42)'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
